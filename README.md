@@ -130,6 +130,15 @@ firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroo
 firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --nonewprivs --private-tmp --apparmor --dns=103.86.96.100 google-chrome
 ```
 
+
+<br><br>
+
+## spotify
+```bash
+firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --seccomp --nonewprivs --apparmor --dns=103.86.96.100 --private-tmp spotify --disable-gpu --disable-software-rasterizer --no-zygote
+```
+
+
 <br><br>
 
 ## use x11
