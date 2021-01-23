@@ -6,6 +6,10 @@ Firejail Cheat Sheet with the most needed stuff..
 - https://www.youtube.com/watch?v=PQo9PEdVuIw
 
 <br><br>
+___________________________________________
+___________________________________________
+<br><br>
+
 
 # Install
 ```bash
@@ -15,10 +19,17 @@ sudo apt install firejail
 ```
 <br><br>
 
+<br><br>
+___________________________________________
+___________________________________________
+<br><br>
+
 # paramater
 - https://firejail.wordpress.com/features-3/man-firejail/
 
-
+<br><br>
+___________________________________________
+___________________________________________
 <br><br>
 
 # start application in sandbox
@@ -57,4 +68,151 @@ firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroo
 ## disable internet access
 ```bash
 --net=none --mac=69:69:69:69:69:69 --memory-deny-write-execute
+```
+
+
+
+<br><br>
+___________________________________________
+___________________________________________
+<br><br>
+
+# Autostart 
+1. Create a file like **yourappname.profile** inside of **~/.config/firejail**
+<br>2. Make sure that your .profile file has the exactly name like your app so as example firefox.profile
+<br>3. Edit your File and edit Rights look below for examples
+<br>4. run **firejail yourapp**
+<br>5. At the next start the app will use your profile file.
+
+<br><br>
+
+## google-chrome.profile
+```bash
+# Firejail profile for default
+# This file is overwritten after every install/update
+# Persistent local customizations
+include default.local
+# Persistent global definitions
+include globals.local
+
+# generic gui profile
+# depending on your usage, you can enable some of the commands below:
+
+include disable-common.inc
+include disable-devel.inc
+include disable-exec.inc
+include disable-interpreters.inc
+include disable-passwdmgr.inc
+# include disable-programs.inc
+include disable-xdg.inc
+
+
+
+
+# apparmor
+caps.drop all
+# ipc-namespace
+machine-id
+# net none
+# netfilter
+no3d
+nodbus
+nodvd
+
+
+
+
+
+
+nogroups
+nonewprivs
+noroot
+noautopulse
+# nosound
+notv
+nou2f
+# novideo
+protocol unix,inet,inet6
+# shell none
+# tracelog
+
+# not working with chromium because its there for default
+# seccomp
+
+disable-mnt
+# private
+# private-bin program
+
+private-cache
+# private-dev
+# private-etc alternatives
+# private-lib
+# private-tmp
+
+# memory-deny-write-execute
+
+dns 103.86.96.100
+```
+
+
+<br><br>
+
+## firefox
+```bash
+# Firejail profile for default
+# This file is overwritten after every install/update
+# Persistent local customizations
+include default.local
+# Persistent global definitions
+include globals.local
+
+# generic gui profile
+# depending on your usage, you can enable some of the commands below:
+
+include disable-common.inc
+include disable-devel.inc
+include disable-exec.inc
+include disable-interpreters.inc
+include disable-passwdmgr.inc
+# include disable-programs.inc
+include disable-xdg.inc
+
+
+
+
+# apparmor
+caps.drop all
+# ipc-namespace
+machine-id
+# net none
+# netfilter
+no3d
+nodbus
+nodvd
+
+nogroups
+nonewprivs
+noroot
+noautopulse
+# nosound
+notv
+nou2f
+# novideo
+protocol unix,inet,inet6
+# shell none
+# tracelog
+seccomp
+disable-mnt
+# private
+# private-bin program
+
+private-cache
+# private-dev
+# private-etc alternatives
+# private-lib
+# private-tmp
+
+# memory-deny-write-execute
+
+dns 103.86.96.100
 ```
