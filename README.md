@@ -7,6 +7,17 @@ Firejail Cheat Sheet with the most needed stuff..
 sudo snap install spotify
 ```
 
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 ___________________________________________
 ___________________________________________
@@ -15,6 +26,24 @@ ___________________________________________
 # Guides
 - https://null-byte.wonderhowto.com/how-to/locking-down-linux-using-ubuntu-as-your-primary-os-part-3-application-hardening-sandboxing-0185710/
 - https://www.youtube.com/watch?v=PQo9PEdVuIw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br><br>
 ___________________________________________
@@ -28,7 +57,18 @@ sudo apt-get install apparmor-profiles apparmor-utils
 sudo aa-enforce /etc/apparmor.d/*
 sudo apt install firejail
 ```
-<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br><br>
 ___________________________________________
@@ -36,7 +76,37 @@ ___________________________________________
 <br><br>
 
 # paramater
+
+<br><br>
+
+## CLI
 - https://firejail.wordpress.com/features-3/man-firejail/
+
+<br><br>
+
+## .profile
+- https://firejail.wordpress.com/features-3/man-firejail-profile/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br><br>
 ___________________________________________
@@ -80,6 +150,37 @@ firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroo
 ```bash
 --net=none --mac=69:69:69:69:69:69 --memory-deny-write-execute
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
