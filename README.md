@@ -27,27 +27,34 @@ sudo apt install firejail
 <br><br>
 
 ## firefox
+```bash
 firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --seccomp --nonewprivs --apparmor --dns=103.86.96.100 --private-tmp firefox
-
+```
 
 <br><br>
 
 ## google-chrome (Chrome and Chromium got for default seccomp)
+```bash
 firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --nonewprivs --private-tmp --apparmor --dns=103.86.96.100 google-chrome
-
+```
 
 <br><br>
 
 ## use x11
+```bash
 --x11=xorg
+```
 
 <br><br>
 
 ## start application in sandbox and create a new /root and /home/user directories in temporary filesystems. All modifications are discarded when the sandbox is closed.
+```bash
 --private --private-dev --private-tmp --private-cache --private-bin=bash,sed,ls,cat --private-cwd --private-etc=group,hostname,localtime,nsswitch.conf,passwd,resolv.conf,default/motd-news
-
+```
 
 <br><br>
 
 ## disable internet access
+```bash
 --net=none --mac=69:69:69:69:69:69 --memory-deny-write-execute
+```
