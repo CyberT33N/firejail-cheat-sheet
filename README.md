@@ -1,6 +1,17 @@
 # Firejail Cheat Sheet
 Firejail Cheat Sheet with the most needed stuff..
 
+# Good 2 know
+- For some reasons it does not work with apps that get installed through snap store as example:
+```bash
+sudo snap install spotify
+```
+
+<br><br>
+___________________________________________
+___________________________________________
+<br><br>
+
 # Guides
 - https://null-byte.wonderhowto.com/how-to/locking-down-linux-using-ubuntu-as-your-primary-os-part-3-application-hardening-sandboxing-0185710/
 - https://www.youtube.com/watch?v=PQo9PEdVuIw
