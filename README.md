@@ -202,8 +202,15 @@ ___________________________________________
 1. Create a file like **yourappname.profile** inside of **~/.config/firejail**
 <br>2. Make sure that your .profile file has the exactly name like your app so as example firefox.profile
 <br>3. Edit your File and edit Rights look below for examples
-<br>4. run **firejail yourapp**
-<br>5. At the next start the app will use your profile file.
+<br>4.
+```bash
+firejail yourapp
+```
+<br>5.
+```bash
+sudo firecfg
+```
+<br>6. At the next start the app will use your profile file.
 
 <br><br>
 
