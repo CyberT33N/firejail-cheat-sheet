@@ -199,6 +199,11 @@ ___________________________________________
 <br><br>
 
 # Autostart 
+
+a) Create a .profile file inside of /etc/firejail
+- There are the default profiles stored.
+
+b)
 1. Create a file like **yourappname.profile** inside of **~/.config/firejail**
 <br>2. Make sure that your .profile file has the exactly name like your app so as example firefox.profile
 <br>3. Edit your File and edit Rights look below for examples
