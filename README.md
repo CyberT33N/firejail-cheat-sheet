@@ -2,10 +2,11 @@
 Firejail Cheat Sheet with the most needed stuff..
 
 # Good 2 know
-- For some reasons it does not work with apps that get installed through snap store as example:
+- It does not work with apps that get installed through snap store as example:
 ```bash
 sudo snap install spotify
 ```
+  - because snap apps got their own sandbox
 
 
 
