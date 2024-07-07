@@ -221,6 +221,12 @@ sudo firecfg
 
 
 
+
+
+
+
+
+
 <br><br>
 <br><br>
 
@@ -295,9 +301,46 @@ dns 103.86.96.100
 
 
 
+<br><br>
+<br><br>
+
+
+#### Recommended
+- It is recommend to download srwiron .deb file and install it with sudo dpkg -i xxx.deb
+  -  Then create **~/.config/firejail/chrome.profile** and use this Code here for creating shortcut on your desktop.
+    ```
+    touch ~/Desktop/iron.desktop
+    
+    sudo nano ~/Desktop/iron.desktop
+    
+    #!/usr/bin/env xdg-open
+    [Desktop Entry]
+    Name=Iron [Sandboxed]
+    Exec=/bin/bash -c "firejail /usr/share/iron/chrome --no-sandbox"
+    Type=Application
+    Terminal=true
+    Icon=/home/t33n/Downloads/chromium-logo.png
+    ```
+    - If chrome is not starting the you must disable sandbox with --no-sandbox
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
 
 
