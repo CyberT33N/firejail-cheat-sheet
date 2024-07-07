@@ -312,29 +312,66 @@ ptions:
     --xephyr-screen=WIDTHxHEIGHT - set screen size for --x11=xephyr.
 ```
 
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+<br><br>
 <br><br>
 
-## firefox
+## Applications
+
+<br><br>
+
+## firefox (tested 2024)
 ```bash
-firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --seccomp --nonewprivs --apparmor --dns=103.86.96.100 --private-tmp firefox
+firejail --noprofile --disable-mnt --notv --caps.drop=all --private-cache --seccomp --private-cwd --private-tmp --nou2f --novideo --noautopulse --nosound --noroot --noprinters --nonewprivs --noinput --nogroups --nodvd --nodbus --no3d --name=firefoxSandbox --machine-id --dns=103.86.96.100 /opt/firefox/firefox
+```
+
+```
+touch ~/Desktop/firefox-sandbox.desktop
+sudo nano ~/Desktop/firefox-sandbox.desktop
+
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Iron [Sandboxed]
+Exec=/bin/bash -c "firejail --noprofile --disable-mnt --notv --caps.drop=all --private-cache --seccomp --private-cwd --private-tmp --nou2f --novideo --noautopulse --nosound --noroot --noprinters --nonewprivs --noinput --nogroups --nodvd --nodbus --no3d --name=firefoxSandbox --machine-id --dns=103.86.96.100 /opt/firefox/firefox"
+Type=Application
+Terminal=true
+Icon=/home/t33n/Documents/logos/firefox-logo.png
 ```
 
 <br><br>
+<br><br>
 
 ## google-chrome (Chrome and Chromium got for default seccomp)
+- Not tested 2024
 ```bash
 firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --nonewprivs --private-tmp --apparmor --dns=103.86.96.100 google-chrome
 ```
 
 
 <br><br>
+<br><br>
 
 ## spotify
+- Not tested 2024
 ```bash
 firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --seccomp --nonewprivs --apparmor --dns=103.86.96.100 --private-tmp spotify --disable-gpu --disable-software-rasterizer --no-zygote
 ```
 
 
+<br><br>
+<br><br>
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+<br><br>
 <br><br>
 
 ## use x11
@@ -399,21 +436,7 @@ ___________________________________________
 
 ## Autostart 
 - **Notice that running the code below will at step 5 will enable firejail profiles for default. This means any application like e.g. firefox or chrome which has profiles will be started inside of firejail sandbox. This is maybe not what you want so it is more recommended to use the CLI instead and run specific applications in sandbox and create maybe desktop shortcuts**
-```
-    ```
-    touch ~/Desktop/iron.desktop
-    
-    sudo nano ~/Desktop/iron.desktop
-    
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Name=Iron [Sandboxed]
-    Exec=/bin/bash -c "firejail /usr/share/iron/chrome"
-    Type=Application
-    Terminal=true
-    Icon=/home/t33n/Downloads/chromium-logo.png
-    ```
-```
+
 
 a) Create a .profile file inside of /etc/firejail
 - There are the default profiles stored.
@@ -446,6 +469,7 @@ sudo firecfg
 <br><br>
 
 ## google-chrome.profile
+- **Not tested 2024**
 ```bash
 # Firejail profile for default
 # This file is overwritten after every install/update
@@ -537,6 +561,7 @@ dns 103.86.96.100
 
 
 ## spotify.profile
+- **Not tested 2024**
 ```bash
 # Firejail profile for default
 # This file is overwritten after every install/update
@@ -623,6 +648,7 @@ dns 103.86.96.100
 <br><br>
 
 ## firefox.profile
+- **Not tested 2024**
 ```bash
 # Firejail profile for default
 # This file is overwritten after every install/update
