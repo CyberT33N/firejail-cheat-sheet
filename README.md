@@ -331,6 +331,8 @@ ptions:
 <br><br>
 
 ## firefox (tested 2024)
+- Download firefox https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US and extract it to `/opt/firefox`
+
 - We will use a temproy home folder with --private which means you can not save e.g. themes
   - This also means you can not install extension.
   - We also disabled sound. You amy want remove/change some args depending on your needs
