@@ -399,6 +399,21 @@ ___________________________________________
 
 ## Autostart 
 - **Notice that running the code below will at step 5 will enable firejail profiles for default. This means any application like e.g. firefox or chrome which has profiles will be started inside of firejail sandbox. This is maybe not what you want so it is more recommended to use the CLI instead and run specific applications in sandbox and create maybe desktop shortcuts**
+```
+    ```
+    touch ~/Desktop/iron.desktop
+    
+    sudo nano ~/Desktop/iron.desktop
+    
+    #!/usr/bin/env xdg-open
+    [Desktop Entry]
+    Name=Iron [Sandboxed]
+    Exec=/bin/bash -c "firejail /usr/share/iron/chrome"
+    Type=Application
+    Terminal=true
+    Icon=/home/t33n/Downloads/chromium-logo.png
+    ```
+```
 
 a) Create a .profile file inside of /etc/firejail
 - There are the default profiles stored.
