@@ -331,8 +331,9 @@ ptions:
 <br><br>
 
 ## firefox (tested 2024)
+- We will use a temproy home folder with --private which means you can not save e.g. themes
 ```bash
-firejail --noprofile --disable-mnt --notv --caps.drop=all --private-cache --seccomp --private-cwd --private-tmp --nou2f --novideo --noautopulse --nosound --noroot --noprinters --nonewprivs --noinput --nogroups --nodvd --nodbus --no3d --name=firefoxSandbox --machine-id --dns=103.86.96.100 /opt/firefox/firefox
+firejail -private --noprofile --noprofile --disable-mnt --notv --caps.drop=all --private-cache --seccomp --private-cwd --private-tmp --nou2f --novideo --noautopulse --nosound --noroot --noprinters --nonewprivs --noinput --nogroups --nodvd --nodbus --no3d --name=firefoxSandbox --machine-id --dns=103.86.96.100 /opt/firefox/firefox
 ```
 
 ```
