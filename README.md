@@ -332,6 +332,8 @@ ptions:
 
 ## firefox (tested 2024)
 - We will use a temproy home folder with --private which means you can not save e.g. themes
+  - This also means you can not install extension.
+  - We also disabled sound. You amy want remove/change some args depending on your needs
 ```bash
 firejail -private --noprofile --noprofile --disable-mnt --notv --caps.drop=all --private-cache --seccomp --private-cwd --private-tmp --nou2f --novideo --noautopulse --nosound --noroot --noprinters --nonewprivs --noinput --nogroups --nodvd --nodbus --no3d --name=firefoxSandbox --machine-id --dns=103.86.96.100 /opt/firefox/firefox
 ```
