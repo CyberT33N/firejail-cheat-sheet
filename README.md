@@ -342,7 +342,7 @@ sudo nano ~/Desktop/firefox-sandbox.desktop
 
 #!/usr/bin/env xdg-open
 [Desktop Entry]
-Name=Iron [Sandboxed]
+Name=Firefox [Sandboxed]
 Exec=/bin/bash -c "firejail --noprofile --disable-mnt --notv --caps.drop=all --private-cache --seccomp --private-cwd --private-tmp --nou2f --novideo --noautopulse --nosound --noroot --noprinters --nonewprivs --noinput --nogroups --nodvd --nodbus --no3d --name=firefoxSandbox --machine-id --dns=103.86.96.100 /opt/firefox/firefox"
 Type=Application
 Terminal=true
