@@ -316,7 +316,7 @@ dns 103.86.96.100
     #!/usr/bin/env xdg-open
     [Desktop Entry]
     Name=Iron [Sandboxed]
-    Exec=/bin/bash -c "firejail /usr/share/iron/chrome --no-sandbox"
+    Exec=/bin/bash -c "firejail /usr/share/iron/chrome"
     Type=Application
     Terminal=true
     Icon=/home/t33n/Downloads/chromium-logo.png
