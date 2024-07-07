@@ -71,16 +71,31 @@ sudo apt install firejail
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 ___________________________________________
 ___________________________________________
 <br><br>
 
-# paramater
+# CLI
 
-<br><br>
-
-## CLI
 - https://firejail.wordpress.com/features-3/man-firejail/
 ```
 ptions:
@@ -299,40 +314,6 @@ ptions:
 
 <br><br>
 
-## .profile
-- https://firejail.wordpress.com/features-3/man-firejail-profile/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br>
-___________________________________________
-___________________________________________
-<br><br>
-
-# start application in sandbox
-
-
-<br><br>
-
 ## firefox
 ```bash
 firejail --private-cache --nodbus --nogroups --caps.drop=all --noprofile --noroot --nou2f --notv --nodvd --noautopulse --no3d --disable-mnt --machine-id --seccomp --nonewprivs --apparmor --dns=103.86.96.100 --private-tmp firefox
@@ -413,7 +394,11 @@ ___________________________________________
 ___________________________________________
 <br><br>
 
-# Autostart 
+# Profiles
+- https://firejail.wordpress.com/features-3/man-firejail-profile/
+
+## Autostart 
+- **Notice that running the code below will at step 5 will enable firejail profiles for default. This means any application like e.g. firefox or chrome which has profiles will be started inside of firejail sandbox. This is maybe not what you want so it is more recommended to use the CLI instead and run specific applications in sandbox and create maybe desktop shortcuts**
 
 a) Create a .profile file inside of /etc/firejail
 - There are the default profiles stored.
@@ -426,7 +411,8 @@ b)
 ```bash
 firejail yourapp
 ```
-<br>5.
+
+5.
 ```bash
 sudo firecfg
 ```
