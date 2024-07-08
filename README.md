@@ -332,6 +332,25 @@ ptions:
 
 ## firefox (tested 2024)
 - Download firefox https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US and extract it to `/opt/firefox`
+- And install firefox via snap
+
+<br><br>
+
+To start firefox without firejail we create this desktop icon:
+- /snap/bin/firefox
+```
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Firefox
+Exec=/bin/bash -c "/snap/bin/firefox"
+Type=Application
+Terminal=true
+Icon=/home/t33n/Documents/logos/firefox_original_logo.png
+
+```
+
+<br><br>
+<br><br>
 
 - We will use a temproy home folder with --private which means you can not save e.g. themes
   - This also means you can not install extension.
